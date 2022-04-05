@@ -33,6 +33,8 @@ these are the dependencies that I used for the project
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
     testImplementation 'org.json:json:20180813'
     
+    I used one of my codepath class project as a reference here is the gitHub link to it, https://github.com/zinaheng/flixster
+     
 ## Is there any other information you’d like us to know?
 I used dummy data to show the effect of pull to refresh. The app start with the dummy data then once it's pulled to refresh, it will show the actual json data.
 
