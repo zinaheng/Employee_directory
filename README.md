@@ -15,7 +15,7 @@ Run->Run App
 focused on parsing the json file correct and display the data to the screen
 
 ## What was the reason for your focus? What problems were you trying to solve?
-
+focused on the paring part because it the main part of the project. I was trying to repesent json data into a user friendly interface.
 ## How long did you spend on this project?
 Time spent: **6** hours spent in total
 
