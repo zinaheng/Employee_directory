@@ -38,7 +38,27 @@ public class MainActivity extends AppCompatActivity {
 
 
         RecyclerView rvEmployeeList = findViewById(R.id.rvEmployeeList);
+        //created a new list with Dummy data to show the effect of pull to refresh
         employees = new ArrayList<>();
+        Employee employee ;
+        JSONObject jsonObject = new JSONObject();
+        try {
+
+            jsonObject.put("full_name", "John Doe");
+            jsonObject.put("team", "Team a");
+            jsonObject.put("biography", "front end engineer");
+            jsonObject.put("photo_url_small", "https://images.pexels.com/photos/11632988/pexels-photo-11632988.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        try {
+            employee = new Employee(jsonObject);
+            employees.add(employee);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+
         //create the adapter
          adapter = new employeeAdapter(this, employees);
         //set the adapter on the recycler view
@@ -79,8 +99,6 @@ public class MainActivity extends AppCompatActivity {
                         Log.i(TAG, "results" + results.toString());
 
 
-                        adapter.clear();
-                        employees.addAll(Employee.fromJsonArray(results));
                         adapter.notifyDataSetChanged();
 
                         swipeContainer.setRefreshing(false);
