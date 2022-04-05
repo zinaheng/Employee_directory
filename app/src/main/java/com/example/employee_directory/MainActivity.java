@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
             jsonObject.put("full_name", "John Doe");
             jsonObject.put("team", "Team a");
-            jsonObject.put("biography", "front end engineer");
+            jsonObject.put("biography", "bio");
             jsonObject.put("photo_url_small", "https://images.pexels.com/photos/11632988/pexels-photo-11632988.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
         } catch (JSONException e) {
             e.printStackTrace();
